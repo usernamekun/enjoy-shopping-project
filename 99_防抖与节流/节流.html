@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>我是计数器<span>0</span></h1>
+        <button>点我加一</button>
+    </div>
+    <!-- 
+        防抖：用户操作很频繁，但是只是执行一次
+        节流：用户操作很频繁，但是吧频繁的操作变为少量操作【可以给浏览器有充裕的时间解析代码】
+     -->
+    <script>
+        // 节流：在规定的间隔时间范围内不会重复触发回调，只有大于这个时间间隔才会触发回调，把频繁触发变为少量出发
+        let span = document.querySelector('span')
+        let button = document.querySelector('button')
+        let count = 0
+        button.onclick = _.throttle(function(){
+            // 节流：目前的这个回调1s执行一次
+            // 假如这里有很多业务逻辑，是不是可以给浏览器很充裕的时间去解析
+            count++
+            span.innerHTML = count
+            console.log('执行了');
+        },1000)
+    </script>
+</body>
+</html>

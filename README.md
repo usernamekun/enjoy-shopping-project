@@ -1,443 +1,126 @@
-# Daily-Interview-Question
-
-加入「前端面试互助群」学习小组，搜索公众号「高级前端进阶」，关注即可加入！
-
-工作日每天一道大厂前端面试题，一年后再回头，会感谢曾经努力的自己！
-
-[线上版本阅读更流畅，点击阅读](https://muyiy.cn/question/)
-
-<br/>
-
-
-
-[推荐一个不错的前端算法系列，点击查看](https://github.com/sisterAn/JavaScript-Algorithms)
-
-<br/>
-
-
-
-推荐扫码使用微信小程序，除了本项目之外，还囊括了算法题、选择题等多种类型题目和详细解析
-
-记住我们的 Slogan：上下班路上刷一点，半年突击进大厂
-
-
-
-<img src="http://resource.muyiy.cn/image/20200106214930.jpg" height="250px">
-
-<br/>
-
-
-
-
-## 今日面试题
-
-第 162 题：实现对象的 Map 函数类似 Array.prototype.map
-
-解析：[第 162 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/431)
-
-<br/>
-
-
-
-
-## 最近汇总
-
-第 161 题：用最精炼的代码实现数组非零非负最小值 index 
-
-```js
-// 例如：[10,21,0,-7,35,7,9,23,18] 输出 5, 7 最小
-function getIndex(arr){
-      let index=null;
-      ...
-      return index;
-}
-```
-
-
-解析：[第 161 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/421)
-
-<br/>
-
-
-
-第 160 题：输出以下代码运行结果，为什么？如果希望每隔 1s 输出一个结果，应该如何改造？注意不可改动 square 方法
-
-```js
-const list = [1, 2, 3]
-const square = num => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(num * num)
-    }, 1000)
-  })
-}
-
-function test() {
-  list.forEach(async x=> {
-    const res = await square(x)
-    console.log(res)
-  })
-}
-test()
-```
-
-
-
-解析：[第 160 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/389)
-
-<br/>
-
-
-
-第 159 题：实现 `Promise.retry`，成功后 `resolve` 结果，失败后重试，尝试超过一定次数才真正的 `reject`
-
-
-
-解析：[第 159 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/387)
-
-<br/>
-
-
-
-第 158 题：如何模拟实现 Array.prototype.splice
-
-
-
-解析：[第 158 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/384)
-
-<br/>
-
-
-
-第 157 题：浏览器缓存 ETag 里的值是怎么生成的
-
-解析：[第 157 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/383)
-
-<br/>
-
-
-
-第 156 题：求最终 left、right 的宽度
-
-```js
-<div class="container">
-    <div class="left"></div>
-    <div class="right"></div>
-</div>
-
-<style>
-  * {
-    padding: 0;
-    margin: 0;
-  }
-  .container {
-    width: 600px;
-    height: 300px;
-    display: flex;
-  }
-  .left {
-    flex: 1 2 300px;
-    background: red;
-  }
-  .right {
-    flex: 2 1 200px;
-    background: blue;
-  }
-</style>
-```
-
-注：此题和 155 题 left、right 样式有些不同
-
-
-
-解析：[第 156 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/382)
-
-<br/>
-
-
-
-第 155 题：求最终 left、right 的宽度
-
-```js
-<div class="container">
-    <div class="left"></div>
-    <div class="right"></div>
-</div>
-
-<style>
-  * {
-    padding: 0;
-    margin: 0;
-  }
-  .container {
-    width: 600px;
-    height: 300px;
-    display: flex;
-  }
-  .left {
-    flex: 1 2 500px;
-    background: red;
-  }
-  .right {
-    flex: 2 1 400px;
-    background: blue;
-  }
-</style>
-```
-
-
-
-解析：[第 155 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/381)
-
-<br/>
-
-
-
-第 154 题：弹性盒子中 flex: 0 1 auto 表示什么意思
-
-解析：[第 154 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/380)
-
-<br/>
-
-
-
-第 153 题：实现一个批量请求函数 multiRequest(urls, maxNum)
-
- 要求如下：
-
-1. 要求最大并发数 maxNum
-
-2. 每当有一个请求返回，就留下一个空位，可以增加新的请求
-3. 所有请求完成后，结果按照 urls 里面的顺序依次打出
-
-
-
-解析：[第 153 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/378)
-
-<br/>
-
-
-
-2019-12-31
-
-> 第 152 题：实现一个 normalize 函数，能将输入的特定的字符串转化为特定的结构化数据
-
-
-
-解析：[第 152 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/331)
-
-<br/>
-
-
-
-
-2019-11-25
-
-> 第 151 题：用最简洁代码实现 indexOf 方法
->
-
-
-
-解析：[第 151 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/321)
-
-<br/>
-
-
-2019-11-21
-
-> 第 150 题：二分查找如何定位左边界和右边界
->
-> 不使用JS数组API，查找有序数列最先出现的位置和最后出现的位置
-
-
-
-解析：[第 150 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/320)
-
-<br/>
-
-
-
-2019-11-12
-
-> 第 149 题：babel 怎么把字符串解析成 AST，是怎么进行词法/语法分析的？
-
-解析：[第 149 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/315)
-
-<br/>
-
-
-
-2019-11-01
-
-> 第 148 题： webpack 中 loader 和 plugin 的区别是什么（平安）
-
-
-
-解析：[第 148 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/308)
-
-<br/>
-
-
-
-2019-10-31
-
-> 第 147 题：v-if、v-show、v-html 的原理是什么，它是如何封装的？
-
-
-
-解析：[第 147 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/307)
-
-<br/>
-
-
-
-2019-10-29
-
-> 第 146 题：Vue 中的 computed 和 watch 的区别在哪里（虾皮）
-
-
-
-解析：[第 146 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/304)
-
-<br/>
-
-
-
-2019-10-24
-
-> 第 145 题：前端项目如何找出性能瓶颈（阿里）
-
-
-
-解析：[第 145 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/300)
-
-<br/>
-
-
-
-2019-10-22
-
-> 第 144 题：手写二进制转 Base64（阿里）
-
-
-
-解析：[第 144 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/299)
-
-<br/>
-
-
-
-2019-10-21
-
-> 第 143 题：将 '10000000000' 形式的字符串，以每 3 位进行分隔展示 '10.000.000.000'
-
-
-
-解析：[第 143 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/296)
-
-<br/>
-
-
-
-2019-10-17
-
-> 第 142 题：（算法题）求多个数组之间的交集（阿里）
-
-
-
-解析：[第 142 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/293)
-
-<br/>
-
-
-
-2019-10-15
-
-> 第 141 题：Vue 中的 computed 是如何实现的（腾讯、平安）
-
-
-
-解析：[第 141 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/291)
-
-<br/>
-
-
-
-2019-10-14
-
-> 第 140 题：为什么 HTTP1.1 不能实现多路复用（腾讯）
-
-
-
-解析：[第 140 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/290)
-
-<br/>
-
-
-
-2019-09-17
-
-> 第 139 题：谈一谈 nextTick 的原理
-
-
-
-解析：[第 139 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/281)
-
-<br/>
-
-
-
-2019-09-11
-
-> 第 138 题：反转链表，每 k 个节点反转一次，不足 k 就保持原有顺序（哔哩哔哩）
-
-
-
-解析：[第 138 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/278)
-
-<br/>
-
-
-
-2019-09-04
-
-> 第 137 题：如何在 H5 和小程序项目中计算白屏时间和首屏时间，说说你的思路
-
-
-
-解析：[第 137 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/272)
-
-<br/>
-
-
-
-
-## 所有面试题汇总
-
--   [壹题所有题目及答案汇总](https://github.com/Advanced-Frontend/Daily-Interview-Question/blob/master/datum/summary.md)
-
-<br/>
-
-
-
-## 半月刊
-
-- [前端 100 问：能搞懂 80% 的请把简历给我](https://github.com/yygmind/blog/issues/43)
-- [【半月刊 1】前端高频面试题及答案汇总](https://juejin.im/post/5c6977e46fb9a049fd1063dc)
-- [【半月刊 2】前端高频面试题及答案汇总](https://juejin.im/post/5c7bd72ef265da2de80f7f17)
-- [【半月刊 3】前端高频面试题及答案汇总](https://juejin.im/post/5c9ac3f66fb9a070e056718f)
-- [【半月刊 4】前端高频面试题及答案汇总](https://juejin.im/post/5cb3376bf265da039c0543da)
-
-<br/>
-
-
-
-## 联系我
-
-进阶系列文章汇总如下，觉得不错点个 star，欢迎 **加群** 互相学习。
-
-> [https://github.com/yygmind/blog](https://github.com/yygmind/blog)
-
-我是木易杨，公众号「高级前端进阶」作者，跟着我**每周重点攻克一个前端面试重难点**。接下来让我带你走进高级前端的世界，在进阶的路上，共勉！
-
-![image](http://resource.muyiy.cn/image/20200123162151.png)
+#笔记
+
+## ref属性
+    1.被用来给元素或子组件注册引用信息（id的替代者）
+    2.应用在html标签上获取的是真实DOM元素，引用在组件标签上是组件实例对象（vc）
+    3.使用方式：
+        打标识：<h1 ref='xxx'> 或 《school ref-'xxx'>
+        获取：this.$refs.xxx  这就是h1 vc实例对象
+
+## prop属性
+    props让组件接受外部传过来的数据
+    传递数据<demo name='xxx' :age='18'/> 这里age前加：，通过v-bind是的里面的18是数字
+    接收数据
+        第一种方式（只接收） props:['name','age']
+        第二种方式（限制类型）props：[name:String,age:Number]
+        第三种方式（限制类型，限制必要性，指定默认值）
+    1.props是只读的，vue底层会检测你对props的修改，如果进行了修改，就会发出警告，若业务需求确实需要修改，那么请复制props的内容到data中一份，然后去修改data中的数据
+
+
+## mixin(混合)
+    功能：可以把多个组件公用的配置提取成一个混入对象
+    使用方式：
+        第一步定义混合，例如：
+        {
+            data(){....}
+            methods:{...}
+            ....
+        }
+        第二部使用混入，例如：
+            1.全局混入：Vue.mixin(xxx)
+            2.局部混入：micins:['xxx]
+
+## plugins插件
+    功能：用于增强vue
+    本质：包含install方法的一个对象，install的第一个参数是vue，第二个以后的参数是插件使用者传递的数据
+    定义插件：
+        对象.install = function(vue,options){
+            1.添加全局过滤器
+            Vue.filter()
+            Vue.prototype.$myProperty = xxx
+
+        }
+    使用参数：Vue.use()
+
+## scoped样式
+
+    作用：让央视在局部生效，防止冲突
+    写法：<style scoped>
+
+## 组件的自定义事件
+    1.一种组件间通信的方式，适用于：子组件==>父组件
+    2.使用场景：A是父组件，B是子组件，B想给A传数据，那么就要用A最终给B绑定自定义事件（事件的回调在A中）
+    3.绑定自定义事件：若想只触发一次，可以使用once修饰符或$once方法
+    4.触发自定义事件：this：$emit('atguigu',数据)
+    5.解绑自定义事件this.$off('atguigu')
+    6.组件上也可以绑定原生DOM事件，需要使用native修饰符
+    7.注意：通过this.$refs.xxx.$on('atguigu',回调)绑定自定义事件时，回调要么配置在methods中，要么用箭头函数，否则this指向会出问题
+## 全局事件总监
+    1.一种组件间通信的方式，适用于任意组件间通信
+    2.安装全局事件总线：
+        new vue({
+            ...
+            beforeCreate(){
+                Vue.prototype.$bus = this
+            }
+            ...
+        })
+        3.使用事件总线
+            1.接收数据：A组件想接收数据，则在A组件中给$bus绑定自定义事件，事件的回调留在A组件自身
+                mounted（）{
+                    this.$bus.$on = ('xxxx',this.demo)
+                }
+            2.提供数据：this.$bus.$emit('xxx',数据)
+        4.最好在beforeDestroy 钩子中，用$off去解绑当前组件所用到的事件
+
+## 消息订阅与发布
+    1.一种组件间通信的方式，适用于任意组件通信
+    2.使用步骤：
+        1.安装pubsub：npm i pubsub-js
+        2.引入：import pubsub from pubsub-js
+        3.接收数据：A组件想接收数据，则在A组件中订阅消息，订阅的回调留在A组件自身
+            mounted（）{
+                this.pid = pubsub.subscribe('xxx',this.demo)
+
+            }
+        4.提供数据 ：pubsub.publish('xxx",数据)
+        5.最好在beforeDestroy中用pubsub.unsubscribe(pid)去取消订阅
+
+
+
+## vue脚手架配置代理
+    方式一:
+        在vue.config.js 中添加如下配置
+            derServe:{
+                proxy:'http://localhost:5000'
+            }
+        说明：1.优点：配质检单，请求资源时直接发给前端即可
+                2.缺点：不能配置多个代理，不能灵活地控制请求是否走代理
+                3.工作方式：若按照上述配置代理，当请求了前端不存在的资源时，name该请求会转发给服务器（优先匹配前端资源）
+    方式二：
+        编写vue.config.js配置如下：
+            derServe:{
+                proxy:{
+                    '/api1':{
+                        target:'http://localhost:5000',
+                        changeOrigin:true,
+                        pathRewrite:{'^/api1':''}
+                    }
+                    '/api2':{
+                        target:'http://localhost:5001',
+                        changeOrigin:true,
+                        pathRewrite:{'^/api2':''}
+                    }
+                }
+            }
+            说明：
+                1.优点：可以配置多个代理，且可以灵活地控制请求是否走代理
+                2.缺点：配置略微繁琐，请求资源时必须加前缀
+
+## 插槽slot
+    作用：让父组件可以向子组件指定位置插入html结构，也是一种组件间通信的方式，适用于
+     父组件 ===> 子组件
+    分类：默认插槽、具名插槽、作用域插槽
+
+    3. 作用域插槽
+    理解：数据在组件的自身，但根据数据生成的结构需要组件的使用者来决定。（games数据在Category组件中，但使用数据所遍历出来的结构由App组件决定）

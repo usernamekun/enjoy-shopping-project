@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lodash.js"></script>
+</head>
+<body>
+    请输入你要输入的内容:<input type="text">
+    <!-- 
+        防抖：用户操作很频繁，但是只是执行一次
+        
+        节流：用户操作很频繁，但是吧频繁的操作变为少量操作【可以给浏览器有充裕的时间解析代码】
+        节流：闭包+延迟器
+     -->
+    <script>
+        // 防抖：前面的所有触发都被取消，最后一次执行在规定的时间之后才会触发，也就是说如果连续快速的触发只会执行一次
+
+        let input = document.querySelector('input')
+        // oninput 文本发生变化就会立即执行
+        // input.oninput = function() {
+        //     console.log('文本框发生变化了');
+        // }
+        input.oninput = _.debounce(function(){
+            console.log("文本框发生变化了");
+        },1000)
+
+        // lodash 插件：里面封装函数的防抖与节流的业务（闭包+延迟器）
+        // 1.
+    </script>
+</body>
+</html>
